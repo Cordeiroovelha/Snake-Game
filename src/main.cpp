@@ -84,7 +84,7 @@ public:
     }
 
     Food(std::deque<Vector2> snakeBody) {
-        Image image = LoadImage("Graphics/food.png");
+        Image image = LoadImage("Graphics/apple.png");
         texture = LoadTextureFromImage(image);
         UnloadImage(image);
         position = GenerateRandomPos(snakeBody);
@@ -152,8 +152,8 @@ public:
 
     Game() : food(snake.body) {
         InitAudioDevice();
-        eatSound = LoadSound("Sounds/eat.mp3");
-        wallSound = LoadSound("Sounds/wall.mp3");
+        eatSound = LoadSound("Sounds/food.mp3");
+        wallSound = LoadSound("Sounds/gameover.mp3");
     }
 
     ~Game()
